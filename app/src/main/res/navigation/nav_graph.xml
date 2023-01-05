@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentsListFragment">
+
+    <fragment
+        android:id="@+id/studentsListFragment"
+        android:name="com.example.studentsapp.StudentsListFragment"
+        android:label="Students List"
+        tools:layout="@layout/fragment_students_list">
+        <action
+            android:id="@+id/action_studentsListFragment_to_ViewStudentFragment"
+            app:destination="@id/viewStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewStudentFragment"
+        android:name="com.example.studentsapp.ViewStudentFragment"
+        android:label="view student"
+        tools:layout="@layout/fragment_view_student">
+        <action
+            android:id="@+id/action_viewStudentFragment_to_EditStudentFragment"
+            app:destination="@id/editStudent" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.example.studentsapp.AddStudentFragment"
+        android:label="Add Student"
+        tools:layout="@layout/fragment_add_student" />
+    <action
+        android:id="@+id/action_global_addStudentFragment"
+        app:destination="@id/addStudentFragment" />
+    <fragment
+        android:id="@+id/editStudent"
+        android:name="com.example.studentsapp.EditStudentFragment"
+        android:label="edit student"
+        tools:layout="@layout/fragment_edit_student">
+        <argument
+            android:name="position"
+            app:argType="integer"/>
+    </fragment>
+</navigation>

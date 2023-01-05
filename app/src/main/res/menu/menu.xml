@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addStudentFragment"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Add"
+        app:showAsAction="always"
+       />
+    <item
+        android:id="@+id/editStudent"
+        android:icon="@drawable/edit_icon"
+        android:title="edit"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>
+
+</menu>
